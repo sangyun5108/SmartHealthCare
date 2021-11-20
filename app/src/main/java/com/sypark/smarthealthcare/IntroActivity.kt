@@ -15,6 +15,7 @@ class IntroActivity : AppCompatActivity() {
         Handler().postDelayed({
             val intent = Intent(this,AuthActivity::class.java)
             startActivity(intent)
+            finish()
         },2000)
     }
 }
