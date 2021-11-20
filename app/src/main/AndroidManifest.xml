@@ -2,12 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sypark.smarthealthcare">
 
-    <uses-permission android:name="android.permission.NFC"/>
-    <!--디바이스의 NFC 하드웨어에 액세스 허용/-->
-
-    <uses-feature android:name="android.hardware.nfc" android:required="true"/>
-    <!--하드웨어 기능 선언: 앱이 NFC에 의존한다는 외부 엔티티(Google Play 스토어)에 알린다.
-        required를 true로 설정하는 경우 디바이스의 NFC 지원이 필수, 스토어는 NFC지원 디바이스만 앱을 표시-->
+    <uses-permission android:name="android.permission.NFC" /> <!-- 디바이스의 NFC 하드웨어에 액세스 허용/ -->
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -17,23 +15,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartHealthCare">
         <activity
-            android:name=".MainActivity"
+            android:name=".auth.AuthActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IntroActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
                 <!-- NDEF 형식의 태그를 사용하는 경우 -->
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.DEFAULT" />
                 <!-- Browsable also enables opening this app through a link on a website -->
                 <category android:name="android.intent.category.BROWSABLE" />
-                <!-- Intent filters without data will never be triggered on NFC devices.
-                Always define the specific data you expect to be present. -->
-                <data android:scheme="https" android:host="www.andreasjakl.com" />
-                <!-- Additionally support http scheme. See:
-                https://developer.android.com/training/app-links/verify-site-associations.html -->
+                <!--
+                Intent filters without data will never be triggered on NFC devices.
+                Always define the specific data you expect to be present.
+                -->
+                <data
+                    android:host="www.andreasjakl.com"
+                    android:scheme="https" />
+                <!--
+                Additionally support http scheme. See:
+                https://developer.android.com/training/app-links/verify-site-associations.html
+                -->
                 <data android:scheme="http" />
+                <!-- 앱을 Android에 등록 -> 태그에서 특정 NDEF 레코드를 찾을 때마다 앱을 시작하려고 한다. -->
             </intent-filter>
-        <!--앱을 Android에 등록 -> 태그에서 특정 NDEF 레코드를 찾을 때마다 앱을 시작하려고 한다.-->
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"></activity>
     </application>
 
 </manifest>

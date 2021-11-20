@@ -111,6 +111,7 @@ class MainActivity : AppCompatActivity() {
             logMessage("New NDEF intent",checkIntent.toString())
 
             //Retrieve the row NDEF message from the tag
+            //Tag에서 메세지 값 받아오기
             val rawMessages = checkIntent.getParcelableArrayExtra(
                 NfcAdapter.EXTRA_NDEF_MESSAGES
             )
@@ -120,6 +121,8 @@ class MainActivity : AppCompatActivity() {
             if(rawMessages!=null){
                 val messages = arrayOfNulls<NdefMessage?>(rawMessages.size)
                 //Array<NdefMessage>(rawMessages.size,{})
+
+                //메세지 값에서 record 값 받아오기
                 for(i in rawMessages.indices){
                     messages[i] = rawMessages[i] as NdefMessage;
                 }
