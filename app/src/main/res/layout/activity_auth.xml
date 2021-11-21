@@ -10,59 +10,23 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#99000000"
         android:scaleType="fitXY"
         android:src="@drawable/auth_image1" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:background="@color/auth_black"
-        android:layout_height="match_parent"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="BeSports"
-            android:textColor="@color/white"
-            android:textSize="50sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="200dp"
-            android:text="클럽에 처음 오셨나요? 바로 가입하고 시작하세요."
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:textColor="@color/white" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="이미 사용하고 계신가요? 로그인 후 시작하세요"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:textColor="@color/white" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:text="로그인 및 가입시 BeSports와 함께할 수 있습니다."
-            />
+        android:layout_height="match_parent"
+        android:background="@color/auth_black" >
     </LinearLayout>
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.sypark.smarthealthcare.auth.AuthFragmen"
+        android:layout_width="match_parent"
+        android:layout_height="640dp"/>
+
     <LinearLayout
+        android:id="@+id/joinContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -99,5 +63,6 @@
             android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
+
 
 </RelativeLayout>

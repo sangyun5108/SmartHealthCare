@@ -4,12 +4,22 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.31145833333333334" />
+        <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/drawable/circle.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/drawable/radius_button.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/drawable/white_circle.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/activity_auth.xml" value="0.25" />
         <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/activity_intro.xml" value="0.15625" />
         <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/activity_main.xml" value="0.17603850050658562" />
+        <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/circle.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/fragment_auth.xml" value="0.25" />
+        <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/fragment_auth_first.xml" value="0.2953125" />
+        <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/fragment_auth_second.xml" value="0.4070642733063115" />
+        <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/fragment_auth_third.xml" value="0.36614583333333334" />
       </map>
     </option>
+  </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/sypark/smarthealthcare/auth/ViewPagerAdapter.kt" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

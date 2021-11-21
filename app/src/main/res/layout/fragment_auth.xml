@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auth.AuthFragmen">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="100dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/AuthViewPager2">
+
+            <ImageView
+                android:id="@+id/firstCircle"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/circle" />
+
+            <ImageView
+                android:id="@+id/secondCircle"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/circle" />
+
+            <ImageView
+                android:id="@+id/thirdCircle"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/circle" />
+        </LinearLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/AuthViewPager2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="InvalidId" />
+
+</FrameLayout>
