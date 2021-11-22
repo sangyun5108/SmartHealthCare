@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartHealthCare">
         <activity
+            android:name=".JoinActivity"
+            android:exported="false" />
+        <activity
             android:name=".auth.LoginActivity"
             android:exported="false" />
         <activity
