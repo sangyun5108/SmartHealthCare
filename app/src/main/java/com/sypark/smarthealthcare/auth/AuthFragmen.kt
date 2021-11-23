@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
-import com.sypark.smarthealthcare.MainActivity
 import com.sypark.smarthealthcare.R
 
 class AuthFragmen : Fragment() {
