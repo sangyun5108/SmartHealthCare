@@ -38,35 +38,36 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7">
 
         <EditText
-            android:id="@+id/editText"
+            android:background="@drawable/edit_text_border"
+            android:id="@+id/loginEmail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:backgroundTint="@color/black"
-            android:hint="이메일 입력"
+            android:hint="Email"
             android:paddingLeft="10dp"
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:background="@drawable/edit_text_border"
+            android:inputType="textPassword"
+            android:id="@+id/loginPassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
-            android:backgroundTint="@color/black"
-            android:hint="패스워드 입력"
+            android:hint="Password"
             android:paddingLeft="10dp"
             app:layout_constraintTop_toBottomOf="@+id/editText"
             tools:layout_editor_absoluteX="10dp" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/login_loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
+        android:layout_margin="20dp"
         android:background="@drawable/radius_button_black"
         android:gravity="center"
         android:text="로그인"
