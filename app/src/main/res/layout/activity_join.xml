@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JoinActivity">
+    tools:context=".auth.JoinActivity">
 
     <ImageView
         android:layout_width="150dp"
@@ -39,7 +39,7 @@
         <EditText
             android:background="@drawable/edit_text_border"
             android:inputType="textEmailAddress"
-            android:id="@+id/editText3"
+            android:id="@+id/joinEmail"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:paddingLeft="10dp"
@@ -50,7 +50,7 @@
 
         <EditText
             android:background="@drawable/edit_text_border"
-            android:id="@+id/editText5"
+            android:id="@+id/joinName"
             android:layout_width="match_parent"
             android:paddingLeft="10dp"
             android:layout_height="50dp"
@@ -62,7 +62,7 @@
         <EditText
             android:background="@drawable/edit_text_border"
             android:inputType="textPassword"
-            android:id="@+id/editText6"
+            android:id="@+id/joinPassword"
             android:layout_width="match_parent"
             android:paddingLeft="10dp"
             android:layout_height="50dp"
@@ -74,7 +74,7 @@
         <EditText
             android:background="@drawable/edit_text_border"
             android:inputType="textPassword"
-            android:id="@+id/editText7"
+            android:id="@+id/joinPasswordCheck"
             android:layout_width="match_parent"
             android:paddingLeft="10dp"
             android:layout_height="50dp"
