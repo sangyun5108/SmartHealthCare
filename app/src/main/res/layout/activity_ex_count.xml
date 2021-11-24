@@ -150,10 +150,17 @@
             android:textSize="40sp" />
 
         <Button
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             android:id="@+id/countButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="천천히" />
+
+        <Button
+            android:id="@+id/logOutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로그아웃"
+            />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
