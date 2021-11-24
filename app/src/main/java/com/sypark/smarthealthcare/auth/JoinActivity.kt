@@ -6,11 +6,16 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.sypark.smarthealthcare.R
 
 class JoinActivity : AppCompatActivity() {
 
     private var permission:Boolean = true
+
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +26,8 @@ class JoinActivity : AppCompatActivity() {
         val password = findViewById<EditText>(R.id.joinPassword)
         val passwordCheck = findViewById<EditText>(R.id.joinPasswordCheck)
         val joinButton = findViewById<Button>(R.id.joinButton)
+
+        auth = Firebase.auth
 
         joinButton.setOnClickListener {
             checkJoin(email,name,password,passwordCheck)
@@ -74,7 +81,19 @@ class JoinActivity : AppCompatActivity() {
 
         if(permission){
             Log.d("permission",permission.toString())
-            Toast.makeText(this,"회원가입이 완료되었습니다.",Toast.LENGTH_SHORT).show()
+            createAcount(emailTxt,passwordTxt)
         }
+    }
+
+    //신규 사용자 가입 Firebase 이용
+    private fun createAcount(email:String,password:String){
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(baseContext,"회원가입 성공",Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(baseContext, "회원가입 실패", Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 }
