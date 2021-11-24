@@ -1,5 +1,6 @@
 package com.sypark.smarthealthcare.auth
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -11,6 +12,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.sypark.smarthealthcare.R
+import com.sypark.smarthealthcare.exercisecount.exCountActivity
 import java.util.regex.Pattern
 
 class LoginActivity : AppCompatActivity() {
@@ -62,6 +64,11 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     Toast.makeText(this,"로그인 완료",Toast.LENGTH_SHORT).show()
+
+                    val intent = Intent(this,exCountActivity::class.java)
+                    startActivity(intent)
+                    finish()
+
                 } else {
                     Toast.makeText(this,"로그인 실패",Toast.LENGTH_SHORT).show()
                 }

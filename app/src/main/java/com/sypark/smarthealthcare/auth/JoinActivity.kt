@@ -1,5 +1,6 @@
 package com.sypark.smarthealthcare.auth
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -10,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.sypark.smarthealthcare.R
+import com.sypark.smarthealthcare.exercisecount.exCountActivity
 
 class JoinActivity : AppCompatActivity() {
 
@@ -91,6 +93,9 @@ class JoinActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     Toast.makeText(baseContext,"회원가입 성공",Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, exCountActivity::class.java)
+                    startActivity(intent)
+                    finish()
                 } else {
                     Toast.makeText(baseContext, "회원가입 실패", Toast.LENGTH_SHORT).show()
                 }

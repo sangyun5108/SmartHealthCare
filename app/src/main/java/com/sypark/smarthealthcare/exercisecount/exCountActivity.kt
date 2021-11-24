@@ -29,7 +29,7 @@ class exCountActivity : AppCompatActivity() {
                 if(progressbar.progress==100){
                     cancel()
                     runOnUiThread {
-                        countNumber.text="Count:${++count}"
+                        countNumber.text="${++count}개"
                         percent.text="100%"
                     }
                     kotlin.concurrent.timer(period = 7, initialDelay = 0) {

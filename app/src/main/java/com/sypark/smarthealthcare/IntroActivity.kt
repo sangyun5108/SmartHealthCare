@@ -9,17 +9,24 @@ import android.os.Bundle
 import android.os.Handler
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.sypark.smarthealthcare.auth.AuthActivity
+import com.sypark.smarthealthcare.exercisecount.exCountActivity
 
 
 class IntroActivity : AppCompatActivity() {
 
     private lateinit var nfcAdapter: NfcAdapter
+    private lateinit var auth: FirebaseAuth
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intro)
+
+        auth = Firebase.auth
 
         nfcAdapter = NfcAdapter.getDefaultAdapter(this)
 
@@ -27,11 +34,19 @@ class IntroActivity : AppCompatActivity() {
             onNewIntent(intent)
         }
 
-        Handler().postDelayed({
-            val intent = Intent(this,AuthActivity::class.java)
-            startActivity(intent)
-            finish()
-        },2000)
+        if(auth.currentUser!=null){
+            Handler().postDelayed({
+                val intent = Intent(this, exCountActivity::class.java)
+                startActivity(intent)
+                finish()
+            },2000)
+        }else{
+            Handler().postDelayed({
+                val intent = Intent(this,AuthActivity::class.java)
+                startActivity(intent)
+                finish()
+            },2000)
+        }
     }
 
     override fun onNewIntent(intent: Intent?) {
