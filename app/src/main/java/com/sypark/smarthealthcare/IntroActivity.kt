@@ -13,7 +13,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.sypark.smarthealthcare.auth.AuthActivity
-import com.sypark.smarthealthcare.exercisecount.exCountActivity
 
 
 class IntroActivity : AppCompatActivity() {
@@ -36,7 +35,7 @@ class IntroActivity : AppCompatActivity() {
 
         if(auth.currentUser!=null){
             Handler().postDelayed({
-                val intent = Intent(this, exCountActivity::class.java)
+                val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()
             },2000)

@@ -3,17 +3,14 @@ package com.sypark.smarthealthcare.auth
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.sypark.smarthealthcare.MainActivity
 import com.sypark.smarthealthcare.R
-import com.sypark.smarthealthcare.exercisecount.exCountActivity
-import java.util.regex.Pattern
 
 class LoginActivity : AppCompatActivity() {
 
@@ -64,7 +61,7 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
 
-                    val intent = Intent(this,exCountActivity::class.java)
+                    val intent = Intent(this,MainActivity::class.java)
                     startActivity(intent)
                     finish()
 

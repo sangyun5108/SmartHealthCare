@@ -10,9 +10,8 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.sypark.smarthealthcare.MainActivity
 import com.sypark.smarthealthcare.R
-import com.sypark.smarthealthcare.exercisecount.exCountActivity
-
 class JoinActivity : AppCompatActivity() {
 
     private var permission:Boolean = true
@@ -93,7 +92,7 @@ class JoinActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     Toast.makeText(baseContext,"회원가입 성공",Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, exCountActivity::class.java)
+                    val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                     finish()
                 } else {

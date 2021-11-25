@@ -18,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartHealthCare">
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".exercisecount.exCountActivity"
             android:exported="false" />
         <activity

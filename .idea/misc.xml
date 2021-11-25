@@ -16,13 +16,16 @@
         <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/activity_intro.xml" value="0.15625" />
         <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/activity_join.xml" value="0.33" />
         <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/activity_login.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/activity_main.xml" value="0.17603850050658562" />
+        <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/circle.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/circle_progressbar_background.xml" value="0.1" />
         <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/fragment_auth.xml" value="0.25" />
         <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/fragment_auth_first.xml" value="0.2953125" />
         <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/fragment_auth_second.xml" value="0.4070642733063115" />
         <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/fragment_auth_third.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/fragment_main_count.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/fragment_main_record.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/User/Desktop/SmartHealthCare/app/src/main/res/layout/fragment_main_seting.xml" value="0.36614583333333334" />
       </map>
     </option>
   </component>

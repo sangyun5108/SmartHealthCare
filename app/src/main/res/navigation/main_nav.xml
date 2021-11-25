@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/mainCountFragment">
+    <fragment
+        android:id="@+id/mainCountFragment"
+        android:name="com.sypark.smarthealthcare.mainCountFragment"
+        android:label="fragment_main_count"
+        tools:layout="@layout/fragment_main_count" >
+        <action
+            android:id="@+id/action_mainCountFragment_to_mainRecordFragment"
+            app:destination="@id/mainRecordFragment" />
+        <action
+            android:id="@+id/action_mainCountFragment_to_mainSetingFragment2"
+            app:destination="@id/mainSetingFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainRecordFragment"
+        android:name="com.sypark.smarthealthcare.mainRecordFragment"
+        android:label="fragment_main_record"
+        tools:layout="@layout/fragment_main_record" >
+        <action
+            android:id="@+id/action_mainRecordFragment_to_mainCountFragment"
+            app:destination="@id/mainCountFragment" />
+        <action
+            android:id="@+id/action_mainRecordFragment_to_mainSetingFragment2"
+            app:destination="@id/mainSetingFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainSetingFragment2"
+        android:name="com.sypark.smarthealthcare.mainSetingFragment"
+        android:label="fragment_main_seting"
+        tools:layout="@layout/fragment_main_seting" >
+        <action
+            android:id="@+id/action_mainSetingFragment2_to_mainCountFragment"
+            app:destination="@id/mainCountFragment" />
+        <action
+            android:id="@+id/action_mainSetingFragment2_to_mainRecordFragment"
+            app:destination="@id/mainRecordFragment" />
+    </fragment>
+</navigation>
