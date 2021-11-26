@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/page_exercise"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/page_record"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_bar_chart_24"
+        android:title="Record"
+        />
+
+    <item
+        android:id="@+id/page_calibrate"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_event_note_24"
+        android:title="Calibration"/>
+
+    <item
+        android:id="@+id/page_settings"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Setting"
+        />
+</menu>
