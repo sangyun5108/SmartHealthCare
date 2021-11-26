@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             }
 
             R.id.page_calibrate -> {
-                supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView2,HomeFragment()).commitAllowingStateLoss()
+                supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView2,Calibration()).commitAllowingStateLoss()
                 return true
             }
 

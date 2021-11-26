@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.sypark.smarthealthcare">
 
     <uses-sdk android:minSdkVersion="10" />
@@ -19,12 +20,6 @@
         android:theme="@style/Theme.SmartHealthCare">
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".exercisecount.exCountActivity"
-            android:exported="false" />
-        <activity
-            android:name=".exercisecount.exCountingActivity"
             android:exported="false" />
         <activity
             android:name=".auth.JoinActivity"
