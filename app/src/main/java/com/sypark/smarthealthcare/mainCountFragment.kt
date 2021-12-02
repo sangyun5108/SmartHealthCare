@@ -1,6 +1,11 @@
 package com.sypark.smarthealthcare
 
+import android.bluetooth.BluetoothAdapter
+import android.bluetooth.BluetoothManager
+import android.content.Context
+import android.content.Context.BLUETOOTH_SERVICE
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,10 +14,14 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.annotation.RequiresApi
+import androidx.core.content.ContextCompat.getSystemService
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.sypark.smarthealthcare.auth.AuthActivity
 
+@RequiresApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
 class mainCountFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +38,6 @@ class mainCountFragment : Fragment() {
         val button = view.findViewById<Button>(R.id.countButton)
         val percent = view.findViewById<TextView>(R.id.percent)
         val countNumber = view.findViewById<TextView>(R.id.countNumber)
-        val logOutBtn = view.findViewById<Button>(R.id.logOutButton)
 
         var pStatus = progressbar.progress
         var count = 0
@@ -54,13 +62,6 @@ class mainCountFragment : Fragment() {
                     }
                 }
             }
-        }
-
-        logOutBtn.setOnClickListener {
-            Firebase.auth.signOut()
-
-            val intent = Intent(requireContext(), AuthActivity::class.java)
-            startActivity(intent)
         }
 
         return view

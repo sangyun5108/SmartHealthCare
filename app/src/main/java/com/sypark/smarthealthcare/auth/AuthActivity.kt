@@ -18,11 +18,13 @@ class AuthActivity : AppCompatActivity() {
         loginBtn.setOnClickListener {
             val intent = Intent(this,LoginActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         JoinBtn.setOnClickListener {
             val intent = Intent(this, JoinActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }
